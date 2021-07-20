@@ -20,4 +20,10 @@ public class LibraryTest {
     public void libraryHasNoBooksAtStart() {
         assertEquals(0, library.getBookCount());
     }
+
+    @Test
+    public void canAddBookToLibrary() {
+        library.addBook(book);
+        assertEquals(1, library.getBookCount());
+    }
 }
