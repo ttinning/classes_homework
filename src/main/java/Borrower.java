@@ -14,8 +14,9 @@ public class Borrower {
         return this.bookList.size();
     }
 
-    public void addToBookList(Book book) {
-        this.bookList.add(book);
+    public void addToBookList(Library library, Book book) {
+        Book borrowed = library.loanBook(book);
+        this.bookList.add(borrowed);
     }
 
     public void removeBook(Book book) {

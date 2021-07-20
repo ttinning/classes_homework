@@ -21,4 +21,12 @@ public class Library {
             this.books.add(book);
         }
     }
+
+    public Book loanBook(Book book) {
+        int bookIndex = this.books.indexOf(book);
+        if (bookIndex >= 0) {
+            return this.books.remove(bookIndex);
+        }
+        return null;
+    }
 }
