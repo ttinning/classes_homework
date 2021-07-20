@@ -25,7 +25,13 @@ public class BorrowerTest {
     public void borrowCanAddBook() {
         borrower.addToBookList(book);
         assertEquals(1, borrower.getCount());
-
-        }
     }
+
+    @Test
+    public void borrowerCanRemoveBook() {
+        borrower.addToBookList(book);
+        borrower.removeBook(book);
+        assertEquals(0, borrower.getCount());
+    }
+}
 

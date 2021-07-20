@@ -17,4 +17,8 @@ public class Borrower {
     public void addToBookList(Book book) {
         this.bookList.add(book);
     }
+
+    public void removeBook(Book book) {
+        this.bookList.remove(0);
+    }
 }
