@@ -11,7 +11,7 @@ public class LibraryTest {
 
     @Before
     public void before() {
-        library = new Library ("Tristan", 2);
+        library = new Library ("Tristan", 1);
         book = new Book("About A Boy", "Nick Hornby", "Comedy");
         book1 = new Book("The Night Manager", "John le Carre", "Drama");
     }
@@ -24,6 +24,13 @@ public class LibraryTest {
     @Test
     public void canAddBookToLibrary() {
         library.addBook(book);
+        assertEquals(1, library.getBookCount());
+    }
+
+    @Test
+    public void cannotAddMoreThanCapacityOfBooks() {
+        library.addBook(book);
+        library.addBook(book1);
         assertEquals(1, library.getBookCount());
     }
 }

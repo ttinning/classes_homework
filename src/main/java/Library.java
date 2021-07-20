@@ -17,6 +17,8 @@ public class Library {
     }
 
     public void addBook(Book book) {
-        this.books.add(book);
+        if (books.size() < this.capacity) {
+            this.books.add(book);
+        }
     }
 }
