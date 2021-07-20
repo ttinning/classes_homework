@@ -22,4 +22,9 @@ public class BookTest {
         assertEquals("Nick Hornby", book.getAuthor());
     }
 
+    @Test
+    public void bookHasGenre() {
+        assertEquals("Comedy", book.getGenre());
+    }
+
 }
